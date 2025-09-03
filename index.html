@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>payoo mobail bank</title>
+
+    <!-- cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="h-[100vh] bg-[#F4F5F7] flex justify-center items-center">
+    <section class="flex flex-col justify-center items-center
+    ">
+        <div class="w-[300px] h-[130px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center">
+            <img src="./assets/Group.png" alt="">
+        </div>
+
+
+      <div class="bg-[white] p-[32px] rounded-[15px] w-[350px]">
+        <form action="" class="">
+          <label class="label text-black text-bold">Mobile Number</label> <br />
+          <input
+            type="email" id="num"
+            class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px]"
+            placeholder="Enter your number"
+          />
+          <br />
+
+          <label class="label text-bold text-black">4 Digit Pin</label> <br />
+          <input
+            type="password" id="pin"
+            class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px]"
+            placeholder="Enter 4 Digit Pin "
+          />
+          <br />
+
+          <button
+          id="btn-login"
+            class="btn bg-[#0874F2] rounded-[32px] w-full text-white text-bold"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- script js added -->
+     <script src="./script.js"></script>
+  </body>
+</html>
