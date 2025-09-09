@@ -113,7 +113,7 @@
       <section style="display: none" class="form" id="add-money-section">
         <p class="mt-[31px] mb-3 font-bold">Add Money</p>
         <div class="bg-[white] p-3 rounded-xl mt-3">
-          <p class="text-bold text-black">Select A Bank</p>
+          <p id="select-bank" class="text-bold text-black">Select A Bank</p>
           <select
             id="bank"
             class="select w-full mt-3 rounded-[32px] focus:outline-none"
@@ -237,9 +237,9 @@
             >
             <br />
             <input
-              type="email"
-              id="agent-number"
-              class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
+              type="number"
+              id="user-number"
+              class="appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
               placeholder="Enter 11 digit number"
             />
             <br />
@@ -248,7 +248,7 @@
             <br />
             <input
               type="text"
-              id="cash-out-value"
+              id="transfer-money-value"
               class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
               placeholder="Enter amount to transfer"
             />
@@ -256,7 +256,7 @@
             <label class="label text-bold text-black">Pin Number</label> <br />
             <input
               type="password"
-              id="pin-number-2"
+              id="pin-number-3"
               class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
               placeholder="Enter 4 digit pin number"
             />
@@ -288,14 +288,14 @@
             <label class="label text-black text-bold">Enter Bonus Coupon</label>
             <br />
             <input
-              type="email"
-              id="agent-number"
+              type="text"
+              id="coupon-value"
               class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
               placeholder="Enter your coupon"
             />
 
             <button
-              id="Send Now"
+              id="coupon-btn-2"
               class="btn bg-[#0874F2] rounded-[32px] w-full text-white text-bold"
             >
               Get Bonus
@@ -306,63 +306,49 @@
 
       <!-- pay bill section -->
       <section style="display: none" class="form" id="pay-bill-section">
-        <p class="mt-[31px] mb-3 font-bold">Pay Bill</p>
-        <div class="bg-[white] p-3 rounded-xl mt-3">
-          <p class="text-bold text-black">Select To Pay</p>
-          <select
-            id="bank"
-            class="select w-full mt-3 rounded-[32px] focus:outline-none"
-          >
-            <option>Gas Bill</option>
+    <p class="mt-[31px] mb-3 font-bold">Pay Bill</p>
+    <div class="bg-[white] p-3 rounded-xl mt-3">
+        <p class="text-bold text-black">Select To Pay</p>
+        <select id="bill-type" class="select w-full mt-3 rounded-[32px] focus:outline-none"> <option>Gas Bill</option>
             <option>Internet Bill</option>
             <option>Electricity</option>
             <option>Water</option>
             <option>TV</option>
             <option>Telephone</option>
-          </select>
+        </select>
 
-          <form action="" class="mt-3">
-            <label class="label text-black text-bold"
-              >Biller Account Number</label
-            >
+        <form action="" class="mt-3">
+            <label class="label text-black text-bold">Biller Account Number</label>
             <br />
             <input
-              type="number"
-              id="account-number"
-              class="appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
-              placeholder="Enter account number"
+                type="number"
+                id="biller-account-number" class="appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
+                placeholder="Enter account number"
             />
             <br />
-
             <label class="label text-bold text-black">Amount to Pay</label>
             <br />
             <input
-              type="text"
-              id="ammount-add"
-              class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
-              placeholder="Add Amount to pay"
+                type="text"
+                id="pay-bill-amount" class="input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
+                placeholder="Add Amount to pay"
             />
             <br />
             <label class="label text-bold text-black">Pin Number</label> <br />
             <input
-              type="number"
-              id="pin-number"
-              class="appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
-              placeholder="Enter 4 digit pin number"
+                type="number"
+                id="pay-bill-pin" class="appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none input mt-[12px] mb-[16px] focus:outline-none bg-[#F4F5F7] rounded-[32px] w-full"
+                placeholder="Enter 4 digit pin number"
             />
             <br />
-
             <button
-              id="add-money-btn"
-              class="btn bg-[#0874F2] rounded-[32px] w-full text-white text-bold"
+                id="pay-bill-btn" class="btn bg-[#0874F2] rounded-[32px] w-full text-white text-bold"
             >
-              Pay Now
+                Pay Now
             </button>
-          </form>
-        </div>
-
-        <div></div>
-      </section>
+        </form>
+    </div>
+</section>
 
       <!-- Transaction History section -->
       <section style="display: none;" id="transaction-section" class="form mt-[31px] my-6">
