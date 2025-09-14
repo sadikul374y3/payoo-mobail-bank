@@ -311,11 +311,11 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (e) {
   const availableBalance = getInnerText("available-balance");
 
   if (payBillAmount <= 0 || payBillAmount > availableBalance) {
-    alert("Invalid amount or insufficient balance!");
+    alert("Invalid amount");
     return;
   }
 
-  if (billerAccountNumber.length < 5) {
+  if (billerAccountNumber.length < 11) {
     alert("Please type a valid account number");
     return;
   }
