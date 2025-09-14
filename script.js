@@ -16,7 +16,8 @@ document.getElementById('btn-login').addEventListener('click', function(e){
     }
 
     else{
-        alert('invalid nunber & pin')
+        alert(`invalid nunber, 
+ valid number : 01326482143, valid pin 1234` )
     }
 
 
